@@ -63,15 +63,17 @@ const noPair = (string) => {
 
 console.log(noPair(`google all that you think can think of`));
 /**
+ * 
  * 5. Any permutation a palindrome
  * Write an algorithm to check whether any anagram of some string is a palindrome.
- *Given some string, "acecarr", the algorithm should return true, because the letters in "acecarr" can be rearranged to the anagram "racecar", which itself is a palindrome. 
+ * Given some string, "acecarr", the algorithm should return true, because the letters in "acecarr" can be rearranged to the anagram "racecar", which itself is a palindrome. 
  In contrast, given the word "north", the algorithm should return false, because there's no anagram for "north" that would be a palindrome.
 
  * if there are no pairs - false
  *    if there are all pairs - true
  * if there are all pairs but one other remaining - true
  *    if there are all pairs but more than 1 other character - false
+ * 
  */
 const anyPermutation = (string) => {
 	let chars = {};
@@ -93,17 +95,17 @@ anyPermutation('darra');
 anyPermutation('darraas');
 
 /**
+ * 
  * 6. Anagram grouping
-Write an algorithm to group a list of words into anagrams. For example, if the input was ['east', 'cars', 'acre', 'arcs', 'teas', 'eats', 'race'], the output should be: [['east', 'teas', 'eats'], ['cars', 'arcs'], ['acre', 'race']].
- */
-/**
- *
- * {0: 'east'} // if string[i]
- * [[east, teas, eats] [cars, arcs] [acre, race]]
- *         aest             acrs        acer
- *          0                1           2
- *
- */
+    Write an algorithm to group a list of words into anagrams. For example, if the input was ['east', 'cars', 'acre', 'arcs', 'teas', 'eats', 'race'], the output should be: [['east', 'teas', 'eats'], ['cars', 'arcs'], ['acre', 'race']].
+  *
+  *
+  * {0: 'east'} // if string[i]
+  * [[east, teas, eats] [cars, arcs] [acre, race]]
+  *         aest             acrs        acer
+  *          0                1           2
+  *
+  */
 const anagramGrouper = (arr) => {
 	let map = {}; // { 'aest', 'acrs', 'acer'}
 
@@ -118,4 +120,5 @@ const anagramGrouper = (arr) => {
 	}
 	console.log(Object.values(map));
 };
+
 anagramGrouper(['east', 'cars', 'acre', 'arcs', 'teas', 'eats', 'race']);
